@@ -1,0 +1,13 @@
+parameters:
+- name: name
+  default: ''
+- name: vmImage
+  default: 'ubuntu-latest'
+
+jobs:
+- job: ${{ parameters.name }}
+  pool: 
+    vmImage: ${{ parameters.vmImage }}
+  # steps:
+  # - script: npm install
+  # - script: npm test
